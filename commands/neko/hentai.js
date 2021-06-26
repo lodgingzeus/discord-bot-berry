@@ -1,0 +1,100 @@
+const NekoClient = require('nekos.life')
+const neko = new NekoClient()
+
+module.exports = {
+    commands: ['hentai', 'h'],
+    callback: async (message, args, text, Discord) =>{
+        if(!message.channel.nsfw) return message.channel.send('Channel is not NSFW')
+        if(!args[0]){
+            message.channel.send((await neko.nsfw.randomHentaiGif()).url)
+        }else if(args[0] === 'boobs'){
+            let sauce = await neko.nsfw.boobs()
+            let embed = new Discord.MessageEmbed()
+            .setTitle('Hentai')
+            .setURL(sauce.url)
+            .setImage(sauce.url)
+            .setFooter(`Requested by: ${message.author.tag}`)
+            message.channel.send(embed)
+        }else if(args[0] === 'anal'){
+            let sauce = await neko.nsfw.anal()
+            let embed = new Discord.MessageEmbed()
+            .setTitle('Hentai')
+            .setURL(sauce.url)
+            .setImage(sauce.url)
+            .setFooter(`Requested by: ${message.author.tag}`)
+            message.channel.send(embed)
+        }else if(args[0] === 'bj'){
+            let sauce = await neko.nsfw.bJ()
+            let embed = new Discord.MessageEmbed()
+            .setTitle('Hentai')
+            .setURL(sauce.url)
+            .setImage(sauce.url)
+            .setFooter(`Requested by: ${message.author.tag}`)
+            message.channel.send(embed)
+        }else if(args[0] === 'lesbian'){
+            let sauce = await neko.nsfw.lesbian()
+            let embed = new Discord.MessageEmbed()
+            .setTitle('Hentai')
+            .setURL(sauce.url)
+            .setImage(sauce.url)
+            .setFooter(`Requested by: ${message.author.tag}`)
+            message.channel.send(embed)
+        }else if(args[0] === 'tits'){
+            let sauce = await neko.nsfw.tits()
+            let embed = new Discord.MessageEmbed()
+            .setTitle('Hentai')
+            .setURL(sauce.url)
+            .setImage(sauce.url)
+            .setFooter(`Requested by: ${message.author.tag}`)
+            message.channel.send(embed)
+        }else if(args[0] === 'pussy'){
+            let sauce = await neko.nsfw.pussy()
+            let embed = new Discord.MessageEmbed()
+            .setTitle('Hentai')
+            .setURL(sauce.url)
+            .setImage(sauce.url)
+            .setFooter(`Requested by: ${message.author.tag}`)
+            message.channel.send(embed)
+        }else if(args[0] === 'cum'){
+            let sauce = await neko.nsfw.cumsluts()
+            let embed = new Discord.MessageEmbed()
+            .setTitle('Hentai')
+            .setURL(sauce.url)
+            .setImage(sauce.url)
+            .setFooter(`Requested by: ${message.author.tag}`)
+            message.channel.send(embed)
+        }else if(args[0] === 'yuri'){
+            let sauce = await neko.nsfw.yuri()
+            let embed = new Discord.MessageEmbed()
+            .setTitle('Hentai')
+            .setURL(sauce.url)
+            .setImage(sauce.url)
+            .setFooter(`Requested by: ${message.author.tag}`)
+            message.channel.send(embed)
+        }else if(args[0] === 'solo'){
+            let sauce = await neko.nsfw.girlSoloGif()
+            let embed = new Discord.MessageEmbed()
+            .setTitle('Hentai')
+            .setURL(sauce.url)
+            .setImage(sauce.url)
+            .setFooter(`Requested by: ${message.author.tag}`)
+            message.channel.send(embed)
+        }else if(args[0] === 'spank'){
+            let sauce = await neko.nsfw.spank()
+            let embed = new Discord.MessageEmbed()
+            .setTitle('Hentai')
+            .setURL(sauce.url)
+            .setImage(sauce.url)
+            .setFooter(`Requested by: ${message.author.tag}`)
+            message.channel.send(embed)
+        }else if(args[0] === 'gasm'){
+            let sauce = await neko.nsfw.gasm()
+            let embed = new Discord.MessageEmbed()
+            .setTitle('Hentai')
+            .setURL(sauce.url)
+            .setImage(sauce.url)
+            .setFooter(`Requested by: ${message.author.tag}`)
+            message.channel.send(embed)
+        }
+    }
+}

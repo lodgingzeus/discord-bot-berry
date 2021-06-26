@@ -1,0 +1,81 @@
+const NekoClient = require('nekos.life')
+const neko = new NekoClient()
+
+module.exports = {
+    commands: 'neko',
+    callback: async (message, args, text, Discord) =>{
+            if(args[0] === 'baka'){
+                let sauce = await neko.sfw.baka()
+                let embed = new Discord.MessageEmbed()
+                .setTitle('Baka')
+                .setURL(sauce.url)
+                .setImage(sauce.url)
+                .setFooter(`Requested by: ${message.author.tag}`)
+                message.channel.send(`${message.author} said baka to ${args[1]}`)
+                message.channel.send(embed)
+            }else if(args[0] === 'pat'){
+                let sauce = await neko.sfw.pat()
+                let embed = new Discord.MessageEmbed()
+                .setTitle('Pat')
+                .setURL(sauce.url)
+                .setImage(sauce.url)
+                .setFooter(`Requested by: ${message.author.tag}`)
+                message.channel.send(`${message.author} pats ${args[1]}`)
+                message.channel.send(embed)
+            }else if(args[0] === 'slap'){
+                let sauce = await neko.sfw.slap()
+                let embed = new Discord.MessageEmbed()
+                .setTitle('Slap')
+                .setURL(sauce.url)
+                .setImage(sauce.url)
+                .setFooter(`Requested by: ${message.author.tag}`)
+                message.channel.send(`${message.author} Slaps ${args[1]}`)
+                message.channel.send(embed)
+            }else if(args[0] === 'poke'){
+                let sauce = await neko.sfw.poke()
+                let embed = new Discord.MessageEmbed()
+                .setTitle('Poke')
+                .setURL(sauce.url)
+                .setImage(sauce.url)
+                .setFooter(`Requested by: ${message.author.tag}`)
+                message.channel.send(`${message.author} Pokes ${args[1]}`)
+                message.channel.send(embed)
+            }else if(args[0] === 'tickle'){
+                let sauce = await neko.sfw.tickle()
+                let embed = new Discord.MessageEmbed()
+                .setTitle('Tickle')
+                .setURL(sauce.url)
+                .setImage(sauce.url)
+                .setFooter(`Requested by: ${message.author.tag}`)
+                message.channel.send(`${message.author} Tickled ${args[1]}`)
+                message.channel.send(embed)
+            }else if(args[0] === 'kiss'){
+                let sauce = await neko.sfw.kiss()
+                let embed = new Discord.MessageEmbed()
+                .setTitle('Kiss')
+                .setURL(sauce.url)
+                .setImage(sauce.url)
+                .setFooter(`Requested by: ${message.author.tag}`)
+                message.channel.send(`${message.author} Kisses ${args[1]}`)
+                message.channel.send(embed)
+            }else if(args[0] === 'hug'){
+                let sauce = await neko.sfw.hug()
+                let embed = new Discord.MessageEmbed()
+                .setTitle('Hug')
+                .setURL(sauce.url)
+                .setImage(sauce.url)
+                .setFooter(`Requested by: ${message.author.tag}`)
+                message.channel.send(`${message.author} gave hugs to ${args[1]}`)
+                message.channel.send(embed)
+            }else if(args[0] === 'cuddle'){
+                let sauce = await neko.sfw.cuddle()
+                let embed = new Discord.MessageEmbed()
+                .setTitle('Cuddle')
+                .setURL(sauce.url)
+                .setImage(sauce.url)
+                .setFooter(`Requested by: ${message.author.tag}`)
+                message.channel.send(`${message.author} cuddles with ${args[1]}`)
+                message.channel.send(embed)
+            }
+        }
+    }
