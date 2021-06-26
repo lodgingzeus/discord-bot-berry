@@ -1,2 +1,2 @@
 # discord-bot-berry
-Learning JavaScript and working on a bot :p
+Working on a bot :p
