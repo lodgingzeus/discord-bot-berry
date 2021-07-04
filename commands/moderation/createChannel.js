@@ -1,5 +1,5 @@
 module.exports = {
-    commands: ['test'],
+    commands: ['create'],
     callback: async (message, args, text, Discord) =>{
         message.delete()
         let collectedInfo = []
