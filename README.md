@@ -1,2 +1,2 @@
 # discord-bot-berry
-Working on a bot :p
+Working on a bot for fun :p
