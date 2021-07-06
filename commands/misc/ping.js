@@ -3,6 +3,8 @@ module.exports = {
     minArgs: 0,
     maxArgs: 0,
     callback: (message, args, text) =>{
-        message.reply('pong!')
-    },
+        message.channel.send('Pinging....').then(msg =>{
+            msg.edit(`Pong! ${msg.createdTimestamp - message.createdTimestamp}ms`)
+        })
+    }
 }
