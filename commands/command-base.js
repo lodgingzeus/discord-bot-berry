@@ -198,6 +198,13 @@ module.exports = (commandOptions) => {
 
 module.exports.listen = (client, Discord) =>{
         // Listen for messages
+        client.user.setPresence({
+            status: 'online',
+            activity: {
+                name: 'Hentai with senpai',
+                type: 'WATCHING',
+            }
+        })
         client.on('message', (message) => {
             const { member, content, guild } = message
     

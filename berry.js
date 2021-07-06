@@ -8,6 +8,7 @@ const neko = new NekoClient()
 const client = new Discord.Client()
 const prefix = '!'
 
+
 client.commands = new Discord.Collection()
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
 
