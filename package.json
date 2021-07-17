@@ -14,6 +14,7 @@
     "discord.js-self": "^12.0.4",
     "dotenv": "^10.0.0",
     "fs": "0.0.1-security",
+    "kasu.nhentaiapi.js": "^2.7.5",
     "nekos.life": "^2.0.7",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.7"
