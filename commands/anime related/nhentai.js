@@ -14,10 +14,25 @@ module.exports = {
             let imageIndex = args[1]
             message.channel.send(
                 api.getID(ID).list(data =>{
-                    message.channel.send(data.page_pics[imageIndex - 1])
+                    let links = data.page_pics
+                    let newLink = []
+                    links.forEach(link =>{
+                        let str = ''
+                        for(let i = 0; i < link.length; i++) {
+                            if(link[i] === 't' && i === 8){
+                                str += 'i'
+                             }else if(link[i] === 't' && i > 40){
+                                str += ''
+                             }else{
+                                str += link[i]
+                             }
+                        }
+                        newLink.push(str)
+                    })
+                    message.channel.send(newLink[imageIndex - 1])
                 })
             )
-        }else{
+        }else if(!args[1]){
             api.getID(ID).list(data =>{
                 sendEmbed(data)
             })
