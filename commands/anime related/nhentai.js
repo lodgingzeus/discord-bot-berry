@@ -9,29 +9,18 @@ module.exports = {
             sendEmbed(data)
         }))
         const ID = args[0]
-        console.log(ID)
         if(args[1]){
             let imageIndex = args[1]
-            message.channel.send(
                 api.getID(ID).list(data =>{
                     let links = data.page_pics
                     let newLink = []
                     links.forEach(link =>{
-                        let str = ''
-                        for(let i = 0; i < link.length; i++) {
-                            if(link[i] === 't' && i === 8){
-                                str += 'i'
-                             }else if(link[i] === 't' && i > 40){
-                                str += ''
-                             }else{
-                                str += link[i]
-                             }
-                        }
-                        newLink.push(str)
+                        let str = link.replace('//t', '//i')
+                        let newStr = str.replace('t.jpg', '.jpg')
+                        newLink.push(newStr)
                     })
                     message.channel.send(newLink[imageIndex - 1])
                 })
-            )
         }else if(!args[1]){
             api.getID(ID).list(data =>{
                 sendEmbed(data)
