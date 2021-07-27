@@ -16,6 +16,7 @@
     "dotenv": "^10.0.0",
     "fs": "0.0.1-security",
     "kasu.nhentaiapi.js": "^2.7.5",
+    "mongoose": "^5.13.3",
     "nekos.life": "^2.0.7",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.7"

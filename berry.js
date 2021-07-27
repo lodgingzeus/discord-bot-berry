@@ -2,12 +2,15 @@ require('dotenv').config()
 const path = require('path')
 const fetch = require('node-fetch')
 const NekoClient = require('nekos.life')
+const mongoose = require('mongoose')
 const fs = require('fs')
 const Discord = require('discord.js')
 const neko = new NekoClient()
 const client = new Discord.Client()
 const prefix = '!'
 
+mongoose.connect(process.env.MONGODBCONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
+.then((e) => {console.log('connected to DB')}).catch(err => {console.log(err)})
 
 client.commands = new Discord.Collection()
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'))
