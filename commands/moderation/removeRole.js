@@ -1,5 +1,5 @@
 module.exports = {
-    commands: ['take', 'remove',],
+    commands: ['take'],
     expectedArgs: `<mention user or user id>, <role id or role name>`,
     minArgs: 2,
     maxArgs: 2,

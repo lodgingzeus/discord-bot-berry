@@ -281,7 +281,7 @@ module.exports.listen = (client, Discord) =>{
                     }
     
                     // Handle the custom command code
-                    callback(message, arguments, arguments.join(' '), Discord)
+                    callback(message, arguments, arguments.join(' '), Discord, client)
                 }
              }
         })
